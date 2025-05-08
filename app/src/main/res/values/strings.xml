@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="restart_text">Рестарт</string>
+    <string name="start_text">Гра почалася!</string>
+    <string name="Game_history">Історія ігор</string>
+</resources>

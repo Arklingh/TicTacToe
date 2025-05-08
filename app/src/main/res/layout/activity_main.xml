@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/gameStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_text"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/modeSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/gameStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/twoPlayerMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 гравці"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/aiMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Проти ШІ"/>
+    </RadioGroup>
+
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:divider="@android:color/black"
+        android:showDividers="middle|end"
+        android:dividerPadding="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/restartButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameStatus">
+
+
+        <Button
+            android:id="@+id/button00"
+            style="@style/gridButton" />
+        <Button
+            android:id="@+id/button01"
+            style="@style/gridButton" />
+        <Button
+            android:id="@+id/button02"
+            style="@style/gridButton" />
+        <Button
+            android:id="@+id/button10"
+            style="@style/gridButton" />
+        <Button
+            android:id="@+id/button11"
+            style="@style/gridButton" />
+        <Button
+            android:id="@+id/button12"
+            style="@style/gridButton" />
+        <Button
+            android:id="@+id/button20"
+            style="@style/gridButton" />
+        <Button
+            android:id="@+id/button21"
+            style="@style/gridButton" />
+        <Button
+            android:id="@+id/button22"
+            style="@style/gridButton" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Game_history"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/restartButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restart_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
